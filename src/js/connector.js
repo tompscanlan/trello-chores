@@ -14,7 +14,7 @@ window.TrelloPowerUp.initialize({
     "card-buttons": function (t, options) {
         return [
           {
-            icon: "/src/images/dollar.svg",
+            icon: "/images/dollar.svg",
             text: "Price",
             callback: function (t) {
               return t.popup({
