@@ -1,6 +1,6 @@
 {
   "name": "trello-chores",
-  "source": ["src/index.html", "src/images/trello_power_up_icon_144x144.jpg"],
+  "source": ["src/index.html"],
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "packageManager": "yarn@4.2.2",
   "devDependencies": {
@@ -11,6 +11,6 @@
   },
   "scripts": {
     "start": "parcel watch",
-    "build": "parcel build"
+    "build": "parcel build src/index.html src/images/*"
   }
 }

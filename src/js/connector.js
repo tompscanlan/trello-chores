@@ -5,10 +5,24 @@ window.TrelloPowerUp.initialize({
         return t.card('all')
         .then(function(card) {
             console.log(card);
-            return [ {
+            return [{
                 text: card.name,
                 color: 'blue'
             }];
         });
-    }
+    },
+    "card-buttons": function (t, options) {
+        return [
+          {
+            icon: "/src/images/dollar.svg",
+            text: "Price",
+            callback: function (t) {
+              return t.popup({
+                title: "Price",
+                url: "../price.html",
+              });
+            },
+          },
+        ];
+    },
 });
