@@ -1,13 +1,18 @@
 console.log('connector.js loaded');
 window.TrelloPowerUp.initialize({
     'card-badges': function(t, opts) {
-        // return array of card badges for a given card
-        return t.card('all')
-        .then(function(card) {
-            console.log(card);
+        return t.get("card", "shared", "price", "0.50")
+        .then(function(price) {
             return [{
-                text: card.name,
-                color: 'blue'
+                    text: "Price is " + price,
+                    color: 'green'
+            }];
+        })
+        .catch(function(error) {
+            console.error(error);
+            return [{
+                text: "error: " + error,
+                color: 'red'
             }];
         });
     },
