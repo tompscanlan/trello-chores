@@ -13,5 +13,11 @@ window.estimate.addEventListener("submit", function (event) {
 });
 
 t.render(function () {
-  t.sizeTo("#price").done();
+    return t.get("card", "shared", "price")
+    .then( function (price){
+      window.price.value = price;
+    })
+    .then(function () {
+      t.sizeTo("#price").done();
+    });
 });
