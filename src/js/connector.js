@@ -19,7 +19,7 @@ window.TrelloPowerUp.initialize({
             callback: function (t) {
               return t.popup({
                 title: "Price",
-                url: "../price.html",
+                url: "price.html",
               });
             },
           },
